@@ -1,8 +1,10 @@
 
 ENGINES_SRC = 
-
-ENGINES_SRC_CPP = $(PROJECT_DIR)/config/engines/ford_aspire.cpp \
-	$(PROJECT_DIR)/config/engines/custom_engine.cpp \
+# We don't need all this engines. Only a generic to build our system
+# We need to remove the includes at firmware/controllers/algo/engine_configuration
+ENGINES_SRC_CPP = $(PROJECT_DIR)/config/engines/custom_engine.cpp \
+	$(PROJECT_DIR)/config/engines/test_engine.cpp \
+#	$(PROJECT_DIR)/config/engines/ford_aspire.cpp \
 	$(PROJECT_DIR)/config/engines/bmw_m73.cpp \
 	$(PROJECT_DIR)/config/engines/bmw_m73_mre.cpp \
 	$(PROJECT_DIR)/config/engines/mazda_miata.cpp \
@@ -21,7 +23,6 @@ ENGINES_SRC_CPP = $(PROJECT_DIR)/config/engines/ford_aspire.cpp \
 	$(PROJECT_DIR)/config/engines/GY6_139QMB.cpp \
 	$(PROJECT_DIR)/config/engines/mazda_626.cpp \
 	$(PROJECT_DIR)/config/engines/sachs.cpp \
-	$(PROJECT_DIR)/config/engines/test_engine.cpp \
 	$(PROJECT_DIR)/config/engines/mitsubishi.cpp \
 	$(PROJECT_DIR)/config/engines/dodge_ram.cpp \
 	$(PROJECT_DIR)/config/engines/m111.cpp \
@@ -32,6 +33,6 @@ ENGINES_SRC_CPP = $(PROJECT_DIR)/config/engines/ford_aspire.cpp \
 	$(PROJECT_DIR)/config/engines/lada_kalina.cpp \
 	$(PROJECT_DIR)/config/engines/honda_600.cpp \
 	$(PROJECT_DIR)/config/engines/me7pnp.cpp \
-	$(PROJECT_DIR)/config/engines/ford_festiva.cpp \
+	$(PROJECT_DIR)/config/engines/ford_festiva.cpp \#
 	
 	

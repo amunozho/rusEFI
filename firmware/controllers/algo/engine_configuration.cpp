@@ -40,7 +40,10 @@
 
 #include "custom_engine.h"
 #include "engine_template.h"
-#include "bmw_m73.h"
+#include "test_engine.h"
+
+//We remove all the engines predefined, we don't need it. The same bellow, at line 777 and 1259
+/*#include "bmw_m73.h"
 
 #include "dodge_neon.h"
 #include "dodge_ram.h"
@@ -63,7 +66,7 @@
 #include "citroenBerlingoTU3JP.h"
 #include "mitsubishi.h"
 #include "subaru.h"
-#include "test_engine.h"
+
 #include "sachs.h"
 #include "vw.h"
 #include "me7pnp.h"
@@ -73,6 +76,7 @@
 #include "ford_festiva.h"
 #include "lada_kalina.h"
 #include "honda_600.h"
+*/
 #include "boost_control.h"
 #if EFI_IDLE_CONTROL
 #include "idle_thread.h"
@@ -770,7 +774,7 @@ static void setDefaultEngineConfiguration(DECLARE_ENGINE_PARAMETER_SIGNATURE) {
 
 	setDefaultFuelCutParameters(PASS_ENGINE_PARAMETER_SIGNATURE);
 
-	setMazdaMiataNbTpsTps(PASS_CONFIG_PARAMETER_SIGNATURE);
+	//setMazdaMiataNbTpsTps(PASS_CONFIG_PARAMETER_SIGNATURE);
 
 	/**
 	 * 4ms is global default dwell for the whole RPM range
@@ -1253,7 +1257,7 @@ void resetConfigurationExt(Logging * logger, configuration_callback_t boardCallb
 	case FRANKENSO_QA_ENGINE:
 		setFrankensoBoardTestConfiguration(PASS_CONFIG_PARAMETER_SIGNATURE);
 		break;
-	case BMW_M73_F:
+/*	case BMW_M73_F:
 		setEngineBMW_M73_Frankenso(PASS_CONFIG_PARAMETER_SIGNATURE);
 		break;
 	case BMW_M73_M:
@@ -1283,12 +1287,14 @@ void resetConfigurationExt(Logging * logger, configuration_callback_t boardCallb
 	case MIATA_NA6_VAF:
 		setMiataNA6_VAF_Frankenso(PASS_CONFIG_PARAMETER_SIGNATURE);
 		break;
+		*/
 	case ETB_BENCH_ENGINE:
 		setEtbTestConfiguration(PASS_CONFIG_PARAMETER_SIGNATURE);
 		break;
 	case TLE8888_BENCH_ENGINE:
 		setTle8888TestConfiguration(PASS_CONFIG_PARAMETER_SIGNATURE);
 		break;
+/*
 	case MAZDA_MIATA_NA8:
 		setMazdaMiataNA8Configuration(PASS_CONFIG_PARAMETER_SIGNATURE);
 		break;
@@ -1376,6 +1382,7 @@ void resetConfigurationExt(Logging * logger, configuration_callback_t boardCallb
 	case VAG_18_TURBO:
 		vag_18_Turbo(PASS_CONFIG_PARAMETER_SIGNATURE);
 		break;
+*/
 	case TEST_33816:
 		setTest33816EngineConfiguration(PASS_CONFIG_PARAMETER_SIGNATURE);
 		break;
